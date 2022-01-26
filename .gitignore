@@ -4,4 +4,4 @@
 game/script.rpy
 game/script.rpyc
 
-*.log
+**/*.log
