@@ -4,7 +4,6 @@
 # name of the character.
 
 define b = Character("Eileen")
-define e = Character("Andreas")
 
 
 # The game starts here.
@@ -15,7 +14,8 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+
+
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -25,15 +25,25 @@ label start:
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    b "Hello! What do you think of my kitchen?"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    b "You know, it's been such a long day. I'm glad to finally be back home so I can relax a bit."
 
-    b "Lol, kill yourself, m8."
+    b "I've had a lot of issues with power outages lately. Maybe a big, strong guy like you could help fix that?"
 
-    e "Just kidding m8."
+    hide eileen happy
+    scene small_apartment_kitchen_night
+    show eileenDark
 
-    b "What are you talking about?"
+    b "Oh no! It happened again."
+
+    b "It's really dark now. I can barely see anything"
+
+    show eileenDark:
+        xalign 0.75
+        yalign 1 
+
+    b "Oh, which way is it? It's so hard to see!"
 
     # This ends the game.
 
