@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 42: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    xalign 0.75
-    ^
+File "game/script.rpy", line 30: expected statement.
+    povname = renpy.input("Oh, you're finally here! I'm so sorry, but I seem to have forgotten your name. What was it, again?", length=32)
+            ^
+
+File "game/script.rpy", line 31: expected statement.
+    povname = povname.strip()
+            ^
+
+File "game/script.rpy", line 33: if statement expects a non-empty block.
+    if not povname:
+                   ^
+
+File "game/script.rpy", line 34: expected statement.
+    povname = "Pat Smith"
+            ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Wed Jan 26 15:33:11 2022
+Wed Jan 26 19:12:23 2022

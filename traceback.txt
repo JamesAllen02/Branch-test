@@ -1,22 +1,46 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 34, in script
-    a "Just kidding m8."
-Exception: Sayer 'a' is not defined.
+  File "game/script.rpy", line 50, in script
+    b "Oh, which way is it? It's so hard to see!"
+IOError: Couldn't find file 'scary-two.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 34, in script
-    a "Just kidding m8."
-  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 681, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 574, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'a' is not defined.
+  File "game/script.rpy", line 50, in script
+    b "Oh, which way is it? It's so hard to see!"
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 721, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/exports.py", line 1419, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 1249, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 901, in do_display
+    **display_args)
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/character.py", line 647, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 4025, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/audio/audio.py", line 1162, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/audio/audio.py", line 1140, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/audio/audio.py", line 1082, in periodic_pass
+    c.periodic()
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/audio/audio.py", line 518, in periodic
+    topf = load(filename)
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/audio/audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\Andreas\Downloads\renpy-7.4.11-sdk/renpy/loader.py", line 798, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'scary-two.ogg'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Test 01 1.0
-Wed Jan 26 14:17:31 2022
+Wed Jan 26 18:50:07 2022
