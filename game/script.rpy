@@ -29,7 +29,7 @@ label start:
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
-    b "Lol, kill yourself."
+    b "Lol, kill yourself, m8."
 
     # This ends the game.
 
