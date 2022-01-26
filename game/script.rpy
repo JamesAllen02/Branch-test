@@ -3,8 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
-define b = Character("Andreas")
+define b = Character("Eileen")
+define e = Character("Andreas")
 
 
 # The game starts here.
@@ -30,6 +30,10 @@ label start:
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
     b "Lol, kill yourself, m8."
+
+    e "Just kidding m8."
+
+    b "What are you talking about?"
 
     # This ends the game.
 
